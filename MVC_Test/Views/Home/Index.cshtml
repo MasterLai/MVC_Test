@@ -2,19 +2,29 @@
     ViewBag.Title = "Home Page";
 }
 @using MVC_Test.Models;
-@{ 
+@{
     List<Test> Lists = ViewBag.lists;
 }
-
-@{ 
-    int count = 0;
-    foreach(Test list in Lists)
-    {
-        count++;
-        <tr id="@list.id">
-            <td>@count</td>
-            <td>@list.name</td>
-            <td>@list.age</td>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
         </tr>
-    }
-}
+    </thead>
+    <tbody>
+        @{
+            int count = 0;
+            foreach (Test list in Lists)
+            {
+                count++;
+                <tr id="@list.id">
+                    <td>@count</td>
+                    <td>@list.name</td>
+                    <td>@list.age</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
