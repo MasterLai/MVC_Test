@@ -11,6 +11,7 @@ namespace MVC_Test.Controllers
 {
     public class HomeController : Controller
     {
+        /*取得首頁的資料傳值*/
         public ActionResult Index()
         {
             SQLConnection db_connect = new SQLConnection();
@@ -20,6 +21,7 @@ namespace MVC_Test.Controllers
             return View();
         }
 
+        /*新增*/
         public ActionResult Add()
         {
             ViewBag.Message = "Add New Item";
@@ -27,6 +29,7 @@ namespace MVC_Test.Controllers
             return View();
         }
 
+        /*接Post的function*/
         [HttpPost]
         [Route("addItem")]
         public string addItem(string name, int age)
