@@ -61,6 +61,20 @@ namespace MVC_Test.Models
             dbconn.Close();
             return lists;
         }
+
+        public string AddLists(string name, int age)
+        {
+            SqlConnection dbconn = Dbconn();
+            SqlCommand add_command = new SqlCommand(@"INSERT INTO [dbo].[Test_Table]([id],[name],[age])VALUES(NEWID(), @name, @age)", dbconn);
+            add_command.Parameters.Add(new SqlParameter("@name", name));
+            add_command.Parameters.Add(new SqlParameter("@age", age));
+            
+            dbconn.Open();
+            add_command.ExecuteNonQuery();
+            dbconn.Close();
+
+            return "success";
+        }
     }
 
     public class Test

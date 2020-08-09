@@ -264,3 +264,6 @@ D:\MVC_Test\MVC_Test\obj\Debug\MVC_Test.csproj.CoreCompileInputs.cache
 D:\MVC_Test\MVC_Test\obj\Debug\MVC_Test.csproj.CopyComplete
 D:\MVC_Test\MVC_Test\obj\Debug\MVC_Test.dll
 D:\MVC_Test\MVC_Test\obj\Debug\MVC_Test.pdb
+D:\MVC_Test\MVC_Test\bin\System.Web.Cors.dll
+D:\MVC_Test\MVC_Test\bin\System.Web.Http.Cors.dll
+D:\MVC_Test\MVC_Test\bin\System.Web.Http.Cors.xml

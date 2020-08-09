@@ -1,4 +1,5 @@
 ﻿using MVC_Test.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -24,6 +25,14 @@ namespace MVC_Test.Controllers
             ViewBag.Message = "Add New Item";
 
             return View();
+        }
+
+        [HttpPost]
+        [Route("addItem")]
+        public string addItem(string name, int age)
+        {
+            SQLConnection sqlconnect = new SQLConnection();
+            return JsonConvert.SerializeObject(sqlconnect.AddLists(name, age));
         }
     }
 }
