@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <xml encoding="UTF8">
+  <configuration>
+   <appsettings>
+    <servername>MASTERLAI</servername>
+    <username>sa</username>
+    <password>bleach21</password>
+    <database>Test</database>
+   </appsettings>
+  </configuration>
+ </xml>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MVC_Test.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,19 +12,16 @@ namespace MVC_Test.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            SQLConnection db_connect = new SQLConnection();
+            List<Test> Lists = db_connect.GetLists();
+            ViewBag.lists = Lists;
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Add()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Add New Item";
 
             return View();
         }
